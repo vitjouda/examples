@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+management:
+  server:
+    port: 9080
+
+spring:
+  cloud:
+    stream:
+      function:
+#        definition: listen;processStream
+        definition: listen
+      bindings:
+        listen-in-0:
+          destination: my-topic
+#        processStream-in-0:
+#          destination: another-topic
+#      kafka:
+#        streams:
+#          bindings:
+#            processStream-in-0:
+#              consumer:
+#                application-id: stream-app-id
